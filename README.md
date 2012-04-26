@@ -1,6 +1,6 @@
 The AEO Front-end Dev Style Guide
 =================================
-*Working Draft*
+***Working Draft***
 
 Our agreed-upon guide for HTML, CSS, JS development style and practices. It aims at improving collaboration, code quality, and enabling supporting infrastructure. It applies to raw, working files that use HTML and CSS files. Tools are free to obfuscate, minify, and compile as long as the general code quality is maintained.
 
