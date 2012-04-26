@@ -6,6 +6,8 @@ Our agreed-upon guide for HTML, CSS, JS development style and practices. It aims
 
 The General, HTML, and CSS guides (and some of this README) are forked/inspired from [Google's HTML/CSS guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml). The JS guide is TBD.
 
+This guide itself should be authored in [Markdown](http://daringfireball.net/projects/markdown/); as it currently lives on [GitHub](https://github.com/), you may also use [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/).
+
 
 Parting Words
 -------------
