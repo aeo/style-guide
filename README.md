@@ -4,7 +4,7 @@ The AEO Front-end Dev Style Guide
 
 Our agreed-upon guide for HTML, CSS, JS development style and practices. It aims at improving collaboration, code quality, and enabling supporting infrastructure. It applies to raw, working files that use HTML and CSS files. Tools are free to obfuscate, minify, and compile as long as the general code quality is maintained.
 
-The General, HTML, and CSS guides (and some of this README) are forked/inspired from [Google's HTML/CSS guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml). The JS guide is TBD but maybe based on [Idiomatic.js](https://github.com/rwldrn/idiomatic.js/).
+The General, HTML, and CSS guides (and some of this README) are forked/inspired from [Google's HTML/CSS guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml). The JS guide is TBD but may eventually start as a fork of [Idiomatic.js](https://github.com/rwldrn/idiomatic.js/).
 
 This guide itself should be authored in [Markdown](http://daringfireball.net/projects/markdown/); as it currently lives on [GitHub](https://github.com/), you may also use [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/).
 
