@@ -17,11 +17,11 @@ Omitting the protocol—which makes the URL relative—prevents mixed content is
 	<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 	/* Not recommended */
 	.example {
-	  background: url(http://www.google.com/images/example);
+		background: url(http://www.google.com/images/example);
 	}
 	/* Recommended */
 	.example {
-	  background: url(//www.google.com/images/example);
+		background: url(//www.google.com/images/example);
 	}
 
 
@@ -30,7 +30,7 @@ Formatting Rules
 
 Indentation
 -----------
-**Indent by 1 tab at a time.**
+*\*In Flux\** **Indent by 1 tab at a time.**
 
 Don’t use spaces or mix tabs and spaces for indentation.
 
@@ -102,7 +102,7 @@ Append action items after a colon as in TODO: action item.
 	<center>Test</center>
 	<!-- TODO: remove optional tags -->
 	<ul>
-	  <li>Apples</li>
-	  <li>Oranges</li>
+		<li>Apples</li>
+		<li>Oranges</li>
 	</ul>
 
