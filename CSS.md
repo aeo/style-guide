@@ -67,8 +67,8 @@ Using functional or generic names reduces the probability of unnecessary documen
 
 class name delimiters
 ----------------------------
+*\*In Flux\** **Separate words in class names by a underscore.**
 
-Separate words in class names by a hyphen.
 Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
 
     /* Not recommended: does not separate the words “demo” and “image” */
@@ -120,7 +120,7 @@ Using class names this way contributes to acceptable levels of understandability
 
 Type selectors
 --------------
-**Avoid qualifying class names with type selectors.**
+*\*In Flux\** **Avoid qualifying class names with type selectors.**
 
 Unless necessary (for example with helper classes), do not use element names in conjunction with classes.
 
@@ -137,7 +137,7 @@ Avoiding unnecessary ancestor selectors is useful for performance reasons.
 
 Shorthand properties
 --------------------
-**Use shorthand properties where possible.**
+*\*In Flux\** **Use shorthand properties where possible.**
 
 CSS offers a variety of shorthand properties (like font) that should be used whenever possible, even in cases where only one value is explicitly set.
 
@@ -161,7 +161,7 @@ Using shorthand properties is useful for code efficiency and understandability.
 
 0 and units
 -----------
-**Omit unit specification after “0” values.**
+*\*In Flux\** **Omit unit specification after “0” values.**
 
 Do not use units after 0 values unless they are required.
 
@@ -171,7 +171,7 @@ Do not use units after 0 values unless they are required.
 
 Leading 0s
 ----------
-**Omit leading “0”s in values.**
+*\*In Flux\** **Omit leading “0”s in values.**
 
 Do not use put 0s in front of values or lengths between -1 and 1.
 
@@ -180,7 +180,7 @@ Do not use put 0s in front of values or lengths between -1 and 1.
 
 Quotation marks in URI values
 -----------------------------
-**Omit quotation marks in URI values.**
+*\*In Flux\** **Omit quotation marks in URI values.**
 
 Do not use quotation marks ("", '') with url().
 
@@ -189,7 +189,7 @@ Do not use quotation marks ("", '') with url().
 
 Hexadecimal notation
 --------------------
-**Use 3 character hexadecimal notation where possible.**
+*\*In Flux\** **Use 3 character hexadecimal notation where possible.**
 
 For color values that permit it, 3 character hexadecimal notation is shorter and more succinct.
 
@@ -202,7 +202,7 @@ For color values that permit it, 3 character hexadecimal notation is shorter and
 
 Hacks
 -----
-**Avoid user agent detection as well as CSS “hacks”—try a different approach first.**
+*\*In Flux\** **Avoid user agent detection as well as CSS “hacks”—try a different approach first.**
 
 It is tempting to address styling differences over user agent detection or special CSS filters, workarounds, and hacks. Both approaches should be considered last resort in order to achieve and maintain an efficient and manageable code base. Put another way, giving detection and hacks a free pass will hurt projects in the long run as projects tend to take the way of least resistance. That is, allowing and making it easy to use detection and hacks means using detection and hacks more frequently—and more frequently is too frequently.
 
@@ -212,7 +212,7 @@ CSS Formatting Rules
 
 Declaration order
 -----------------
-**Alphabetize declarations.**
+*\*In Flux\** **Alphabetize declarations.**
 
 Put declarations in alphabetical order in order to achieve consistent code in a way that is easy to remember and maintain.
 
@@ -230,7 +230,7 @@ Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-s
 
 Block content indentation
 -------------------------
-**Indent all block content.**
+*\*In Flux\** **Indent all block content.**
 
 Indent all block content, that is rules within rules as well as declarations, so to reflect hierarchy and improve understanding.
 
@@ -246,7 +246,7 @@ Indent all block content, that is rules within rules as well as declarations, so
 
 Declaration stops
 -----------------
-**Use a semicolon and a newline after every declaration.**
+*\*In Flux\** **Use a semicolon and a newline after every declaration.**
 
 End every declaration with a semicolon and a newline for consistency and extensibility reasons.
 
@@ -267,7 +267,7 @@ End every declaration with a semicolon and a newline for consistency and extensi
 
 Property name stops
 -------------------
-**Use a space after a property name’s colon.**
+*\*In Flux\** **Use a space after a property name’s colon.**
 
 Always use a single space between property and value (but no space between property and colon) for consistency reasons.
 
@@ -284,7 +284,7 @@ Always use a single space between property and value (but no space between prope
 
 Selector and declaration separation
 -----------------------------------
-**Separate selectors and declarations by new lines.**
+*\*In Flux\** **Separate selectors and declarations by new lines.**
 
 Always start a new line for each selector and declaration.
 
@@ -304,7 +304,7 @@ Always start a new line for each selector and declaration.
 
 Rule separation
 ---------------
-**Separate rules by new lines.**
+*\*In Flux\** **Separate rules by new lines.**
 
 Always put a line between rules.
 
@@ -329,7 +329,7 @@ Always put a line between rules.
 
 CSS Meta Rules
 --------------
-**Section comments**
+*\*In Flux\** **Section comments**
 
 Group sections by a section comment (optional).
 If possible, group style sheets sections together by using comments. Separate sections with new lines.
