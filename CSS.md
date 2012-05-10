@@ -1,8 +1,10 @@
 CSS Style Rules
+===============
 
 CSS validity
+------------
 
-link ▽ Use valid CSS where possible.
+Use valid CSS where possible.
 Unless dealing with CSS validator bugs or requiring proprietary syntax, use valid CSS code.
 
 Use tools such as the W3C CSS validator to test.
@@ -10,8 +12,9 @@ Use tools such as the W3C CSS validator to test.
 Using valid CSS is a measurable baseline quality attribute that allows to spot CSS code that may not have any effect and can be removed, and that ensures proper CSS usage.
 
 ID and class naming
+-------------------
 
-link ▽ Use meaningful or generic ID and class names.
+Use meaningful or generic ID and class names.
 Instead of presentational or cryptic names, always use ID and class names that reflect the purpose of the element in question, or that are otherwise generic.
 
 Names that are specific and reflect the purpose of the element should be preferred as these are most understandable and the least likely to change.
@@ -20,223 +23,286 @@ Generic names are simply a fallback for elements that have no particular or no m
 
 Using functional or generic names reduces the probability of unnecessary document or template changes.
 
-/* Not recommended: meaningless */
-#yee-1901 {}
+    /* Not recommended: meaningless */
+    #yee_1901 {}
 
-/* Not recommended: presentational */
-.button-green {}
-.clear {}
-/* Recommended: specific */
-#gallery {}
-#login {}
-.video {}
+    /* Not recommended: presentational */
+    .button_green {}
+    .clear {}
 
-/* Recommended: generic */
-.aux {}
-.alt {}
+    /* Recommended: specific */
+    #gallery {}
+    #login {}
+    .video {}
+
+    /* Recommended: generic */
+    .aux {}
+    .alt {}
+
+ID vs class usage
+-----------------------
+
+IDs should never be used for styling purposes, use them as javascript hooks or for anchor tags. Class names can be identical to IDs if desired (eg id="warning_flag" class="warning_flag")
+Reasons for this are to bring elements on the same plane in terms of CSS specificity, potential improved DOM selector performance (if less IDs exist) and appease CSS linter.
+
+    /* Not recommended */
+    #warning_flag {
+      float: left;
+      color: red;
+    }
+
+    /* Recommended */
+    .warning_flag {
+      float: left;
+      color: red;
+    }
+
+    /* Also okay :) */
+    <div id="warning_flag" class="warning_flag"></div>
+
+
 ID and class name style
+-----------------------
 
-link ▽ Use ID and class names that are as short as possible but as long as necessary.
+Use ID and class names that are as short as possible but as long as necessary.
 Try to convey what an ID or class is about while being as brief as possible.
 
 Using ID and class names this way contributes to acceptable levels of understandability and code efficiency.
 
-/* Not recommended */
-#navigation {}
-.atr {}
-/* Recommended */
-#nav {}
-.author {}
-Type selectors
+    /* Not recommended */
+    #navigation {}
+    .atr {}
 
-link ▽ Avoid qualifying ID and class names with type selectors.
+    /* Recommended */
+    #nav {}
+    .author {}
+
+Type selectors
+--------------
+
+Avoid qualifying ID and class names with type selectors.
 Unless necessary (for example with helper classes), do not use element names in conjunction with IDs or classes.
 
 Avoiding unnecessary ancestor selectors is useful for performance reasons.
 
-/* Not recommended */
-ul#example {}
-div.error {}
-/* Recommended */
-#example {}
-.error {}
-Shorthand properties
+    /* Not recommended */
+    ul#example {}
+    div.error {}
 
-link ▽ Use shorthand properties where possible.
+    /* Recommended */
+    #example {}
+    .error {}
+
+Shorthand properties
+--------------------
+
+Use shorthand properties where possible.
 CSS offers a variety of shorthand properties (like font) that should be used whenever possible, even in cases where only one value is explicitly set.
 
 Using shorthand properties is useful for code efficiency and understandability.
 
-/* Not recommended */
-border-top-style: none;
-font-family: palatino, georgia, serif;
-font-size: 100%;
-line-height: 1.6;
-padding-bottom: 2em;
-padding-left: 1em;
-padding-right: 1em;
-padding-top: 0;
-/* Recommended */
-border-top: 0;
-font: 100%/1.6 palatino, georgia, serif;
-padding: 0 1em 2em;
-0 and units
+    /* Not recommended */
+    border-top-style: none;
+    font-family: palatino, georgia, serif;
+    font-size: 100%;
+    line-height: 1.6;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0;
 
-link ▽ Omit unit specification after “0” values.
+    /* Recommended */
+    border-top: 0;
+    font: 100%/1.6 palatino, georgia, serif;
+    padding: 0 1em 2em;
+    0 and units
+
+Omit unit specification after “0” values.
 Do not use units after 0 values unless they are required.
 
-margin: 0;
-padding: 0;
-Leading 0s
+    margin: 0;
+    padding: 0;
 
-link ▽ Omit leading “0”s in values.
+Leading 0s
+----------
+
+Omit leading “0”s in values.
 Do not use put 0s in front of values or lengths between -1 and 1.
 
-font-size: .8em;
-Quotation marks in URI values
+    font-size: .8em;
 
-link ▽ Omit quotation marks in URI values.
+Quotation marks in URI values
+-----------------------------
+
+Omit quotation marks in URI values.
 Do not use quotation marks ("", '') with url().
 
-@import url(//www.google.com/css/go.css);
-Hexadecimal notation
+    @import url(//www.google.com/css/go.css);
 
-link ▽ Use 3 character hexadecimal notation where possible.
+Hexadecimal notation
+--------------------
+
+Use 3 character hexadecimal notation where possible.
 For color values that permit it, 3 character hexadecimal notation is shorter and more succinct.
 
-/* Not recommended */
-color: #eebbcc;
-/* Recommended */
-color: #ebc;
-Prefixes
+    /* Not recommended */
+    color: #eebbcc;
 
-link ▽ Prefix selectors with an application-specific prefix (optional).
+    /* Recommended */
+    color: #ebc;
+
+Prefixes
+--------
+
+Prefix selectors with an application-specific prefix (optional).
 In large projects as well as for code that gets embedded in other projects or on external sites use prefixes (as namespaces) for ID and class names. Use short, unique identifiers followed by a dash.
 
 Using namespaces helps preventing naming conflicts and can make maintenance easier, for example in search and replace operations.
 
-.adw-help {} /* AdWords */
-#maia-note {} /* Maia */
-ID and class name delimiters
+    .adw-help {} /* AdWords */
+    #maia-note {} /* Maia */
 
-link ▽ Separate words in ID and class names by a hyphen.
+ID and class name delimiters
+----------------------------
+
+Separate words in ID and class names by a hyphen.
 Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
 
-/* Not recommended: does not separate the words “demo” and “image” */
-.demoimage {}
+    /* Not recommended: does not separate the words “demo” and “image” */
+    .demoimage {}
 
-/* Not recommended: uses underscore instead of hyphen */
-.error_status {}
-/* Recommended */
-#video-id {}
-.ads-sample {}
+    /* Not recommended: uses underscore instead of hyphen */
+    .error_status {}
+
+    /* Recommended */
+    #video_id {}
+    .ads_sample {}
+
 Hacks
+-----
 
-link ▽ Avoid user agent detection as well as CSS “hacks”—try a different approach first.
+Avoid user agent detection as well as CSS “hacks”—try a different approach first.
 It is tempting to address styling differences over user agent detection or special CSS filters, workarounds, and hacks. Both approaches should be considered last resort in order to achieve and maintain an efficient and manageable code base. Put another way, giving detection and hacks a free pass will hurt projects in the long run as projects tend to take the way of least resistance. That is, allowing and making it easy to use detection and hacks means using detection and hacks more frequently—and more frequently is too frequently.
 
 CSS Formatting Rules
+====================
 
 Declaration order
+-----------------
 
-link ▽ Alphabetize declarations.
+Alphabetize declarations.
 Put declarations in alphabetical order in order to achieve consistent code in a way that is easy to remember and maintain.
 
 Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-specific prefixes for a certain CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).
 
-background: fuchsia;
-border: 1px solid;
--moz-border-radius: 4px;
--webkit-border-radius: 4px;
-border-radius: 4px;
-color: black;
-text-align: center;
-text-indent: 2em;
-Block content indentation
+    background: fuchsia;
+    border: 1px solid;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: black;
+    text-align: center;
+    text-indent: 2em;
 
-link ▽ Indent all block content.
+Block content indentation
+-------------------------
+
+Indent all block content.
 Indent all block content, that is rules within rules as well as declarations, so to reflect hierarchy and improve understanding.
 
-@media screen, projection {
+    @media screen, projection {
 
-  html {
-    background: #fff;
-    color: #444;
-  }
+      html {
+        background: #fff;
+        color: #444;
+      }
 
-}
+    }
+
 Declaration stops
+-----------------
 
-link ▽ Use a semicolon after every declaration.
+Use a semicolon after every declaration.
 End every declaration with a semicolon for consistency and extensibility reasons.
 
-/* Not recommended */
-.test {
-  display: block;
-  height: 100px
-}
-/* Recommended */
-.test {
-  display: block;
-  height: 100px;
-}
-Property name stops
+    /* Not recommended */
+    .test {
+      display: block;
+      height: 100px
+    }
 
-link ▽ Use a space after a property name’s colon.
+    /* Recommended */
+    .test {
+      display: block;
+      height: 100px;
+    }
+
+Property name stops
+-------------------
+
+Use a space after a property name’s colon.
 Always use a single space between property and value (but no space between property and colon) for consistency reasons.
 
-/* Not recommended */
-h3 {
-  font-weight:bold;
-}
-/* Recommended */
-h3 {
-  font-weight: bold;
-}
-Selector and declaration separation
+    /* Not recommended */
+    h3 {
+      font-weight:bold;
+    }
 
-link ▽ Separate selectors and declarations by new lines.
+    /* Recommended */
+    h3 {
+      font-weight: bold;
+    }
+
+Selector and declaration separation
+-----------------------------------
+
+Separate selectors and declarations by new lines.
 Always start a new line for each selector and declaration.
 
-/* Not recommended */
-a:focus, a:active {
-  position: relative; top: 1px;
-}
-/* Recommended */
-h1,
-h2,
-h3 {
-  font-weight: normal;
-  line-height: 1.2;
-}
-Rule separation
+    /* Not recommended */
+    a:focus, a:active {
+      position: relative; top: 1px;
+    }
 
-link ▽ Separate rules by new lines.
+    /* Recommended */
+    h1,
+    h2,
+    h3 {
+      font-weight: normal;
+      line-height: 1.2;
+    }
+
+Rule separation
+---------------
+
+Separate rules by new lines.
 Always put a line between rules.
 
-html {
-  background: #fff;
-}
+    html {
+      background: #fff;
+    }
 
-body {
-  margin: auto;
-  width: 50%;
-}
+    body {
+      margin: auto;
+      width: 50%;
+    }
+
 CSS Meta Rules
+--------------
 
 Section comments
 
-link ▽ Group sections by a section comment (optional).
+Group sections by a section comment (optional).
 If possible, group style sheets sections together by using comments. Separate sections with new lines.
 
-/* Header */
+    /* Header */
 
-#adw-header {}
+    #adw-header {}
 
-/* Footer */
+    /* Footer */
 
-#adw-footer {}
+    #adw-footer {}
 
-/* Gallery */
+    /* Gallery */
 
-.adw-gallery {}
+    .adw-gallery {}
