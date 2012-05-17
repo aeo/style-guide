@@ -271,7 +271,7 @@ End every declaration with a semicolon and a newline for consistency and extensi
 
 Property name stops
 -------------------
-**Use a space after a property name’s colon.**
+**Use a space after a property name's colon.**
 
 Always use a single space between property and value (but no space between property and colon) for consistency reasons.
 
@@ -310,17 +310,9 @@ Rule separation
 ---------------
 *\*In Flux\** **Separate rules by new lines.**
 
-Always put a line between rules.
+Don't put a line between rules.
 
     /* Not recommended */
-    a {
-      color: blue;
-    }
-    b {
-      color: red;
-    }
-
-    /* Recommended */
     html {
       background: #fff;
     }
@@ -330,6 +322,13 @@ Always put a line between rules.
       width: 50%;
     }
 
+    /* Recommended */
+    a {
+      color: blue;
+    }
+    b {
+      color: red;
+    }
 
 Section comments
 ----------------
