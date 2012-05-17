@@ -1,7 +1,7 @@
 CSS Style Rules
 ===============
 
-CSS validity
+CSS Validity
 ------------
 **Use valid CSS where possible.**
 
@@ -36,7 +36,7 @@ Reasons for this are to bring elements on the same plane in terms of CSS specifi
     <div id="warning_flag" class="warning_flag"></div>
 
 
-Class naming
+Class Naming
 ------------
 **Use meaningful or generic class names.**
 
@@ -65,8 +65,8 @@ Using functional or generic names reduces the probability of unnecessary documen
     .alt {}
 
 
-class name delimiters
-----------------------------
+Class Name Delimiters
+---------------------
 *\*In Flux\** **Separate words in class names by a underscore.**
 
 Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
@@ -101,7 +101,7 @@ Exceptions to this are classes meant to be _standard_ across the site (eg. `.str
     .js_quickview {} /* Used only for Javascript event handling */
 
 
-Class name style
+Class Name Style
 ----------------
 **Use class names that are as short as possible but as long as necessary.**
 
@@ -118,7 +118,7 @@ Using class names this way contributes to acceptable levels of understandability
     .author {}
 
 
-Type selectors
+Type Selectors
 --------------
 **Avoid qualifying class names with type selectors.**
 
@@ -135,7 +135,7 @@ Avoiding unnecessary ancestor selectors is useful for performance reasons.
     .error {}
 
 
-Shorthand properties
+Shorthand Properties
 --------------------
 **Use shorthand properties where possible.**
 
@@ -159,7 +159,7 @@ Using shorthand properties is useful for code efficiency and understandability.
     padding: 0 1em 2em;
 
 
-0 and units
+0 and Units
 -----------
 **Omit unit specification after “0” values.**
 
@@ -178,7 +178,7 @@ Do not use put 0s in front of values or lengths between -1 and 1.
     font-size: .8em;
 
 
-Quotation marks in URI values
+Quotation Marks in URI Values
 -----------------------------
 **Omit quotation marks in URI values.**
 
@@ -187,7 +187,7 @@ Do not use quotation marks ("", '') with url().
     background: url(//www.ae.com/Images/hello.png);
 
 
-Hexadecimal notation
+Hexadecimal Notation
 --------------------
 **Use hexadecimal notation and 3 character hexadecimal notation where possible.**
 
@@ -214,7 +214,7 @@ It is tempting to address styling differences over user agent detection or speci
 CSS Formatting Rules
 ====================
 
-Declaration order
+Declaration Order
 -----------------
 *\*In Flux\** **Alphabetize declarations.**
 
@@ -232,7 +232,7 @@ Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-s
     text-indent: 2em;
 
 
-Block content indentation
+Block Content Indentation
 -------------------------
 **Indent all block content.**
 
@@ -248,7 +248,7 @@ Indent all block content, that is rules within rules as well as declarations, so
     }
 
 
-Declaration stops
+Declaration Stops
 -----------------
 **Use a semicolon and a newline after every declaration.**
 
@@ -269,7 +269,7 @@ End every declaration with a semicolon and a newline for consistency and extensi
     }
 
 
-Property name stops
+Property Name Stops
 -------------------
 **Use a space after a property name's colon.**
 
@@ -286,7 +286,7 @@ Always use a single space between property and value (but no space between prope
     }
 
 
-Selector and declaration separation
+Selector and Declaration Separation
 -----------------------------------
 **Separate selectors and declarations by new lines.**
 
@@ -306,7 +306,7 @@ Always start a new line for each selector and declaration.
     }
 
 
-Rule separation
+Rule Separation
 ---------------
 *\*In Flux\** **Separate rules by new lines.**
 
@@ -330,7 +330,7 @@ Don't put a line between rules.
       color: red;
     }
 
-Section comments
+Section Comments
 ----------------
 **Group sections by a section comment.**
 
