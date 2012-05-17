@@ -16,7 +16,7 @@ Using IDs
 ---------
 **Do not use IDs for styling.**
 
-IDs should never be used for styling purposes, use them as javascript hooks or for anchor tags. Class names can be identical to IDs if desired (eg id="warning_flag" class="warning_flag")
+IDs should never be used for styling purposes, use them as javascript hooks or for anchor tags. Class names can be identical to IDs if desired (eg. `<div id="warning_flag" class="warning_flag">`).
 
 Reasons for this are to bring elements on the same plane in terms of CSS specificity, potential improved DOM selector performance (if less IDs exist) and appease CSS linter.
 
@@ -120,7 +120,7 @@ Using class names this way contributes to acceptable levels of understandability
 
 Type selectors
 --------------
-*\*In Flux\** **Avoid qualifying class names with type selectors.**
+**Avoid qualifying class names with type selectors.**
 
 Unless necessary (for example with helper classes), do not use element names in conjunction with classes.
 
@@ -137,9 +137,9 @@ Avoiding unnecessary ancestor selectors is useful for performance reasons.
 
 Shorthand properties
 --------------------
-*\*In Flux\** **Use shorthand properties where possible.**
+**Use shorthand properties where possible.**
 
-CSS offers a variety of shorthand properties (like font) that should be used whenever possible, even in cases where only one value is explicitly set.
+CSS offers a variety of shorthand properties (like font) that should be used whenever possible, even in cases where only one value is explicitly set. The exception to this rule is that shorthand should not produce inheritance bugs (eg. using `background: url(...) no-repeat;` may clobber a necessary background-color).
 
 Using shorthand properties is useful for code efficiency and understandability.
 
@@ -161,7 +161,7 @@ Using shorthand properties is useful for code efficiency and understandability.
 
 0 and units
 -----------
-*\*In Flux\** **Omit unit specification after “0” values.**
+**Omit unit specification after “0” values.**
 
 Do not use units after 0 values unless they are required.
 
@@ -171,7 +171,7 @@ Do not use units after 0 values unless they are required.
 
 Leading 0s
 ----------
-*\*In Flux\** **Omit leading “0”s in values.**
+**Omit leading “0”s in values.**
 
 Do not use put 0s in front of values or lengths between -1 and 1.
 
@@ -180,7 +180,7 @@ Do not use put 0s in front of values or lengths between -1 and 1.
 
 Quotation marks in URI values
 -----------------------------
-*\*In Flux\** **Omit quotation marks in URI values.**
+**Omit quotation marks in URI values.**
 
 Do not use quotation marks ("", '') with url().
 
@@ -189,20 +189,24 @@ Do not use quotation marks ("", '') with url().
 
 Hexadecimal notation
 --------------------
-*\*In Flux\** **Use 3 character hexadecimal notation where possible.**
+**Use hexadecimal notation and 3 character hexadecimal notation where possible.**
 
-For color values that permit it, 3 character hexadecimal notation is shorter and more succinct.
+Do not use RGB, HSL, or color names. Use of RGBA is acceptable when opacity is used. Always write hexadecimal values in lowercase. For color values that permit it, 3 character hexadecimal notation is shorter and more succinct.
 
     /* Not recommended */
-    color: #eebbcc;
+    color: rgb(65, 131, 196);
+    color: green;
+    color: #EEBBCC;
 
     /* Recommended */
+    color: #4183C4;
+    color: #0f0;
     color: #ebc;
 
 
 Hacks
 -----
-*\*In Flux\** **Avoid user agent detection as well as CSS “hacks”—try a different approach first.**
+**Avoid user agent detection as well as CSS “hacks”—try a different approach first.**
 
 It is tempting to address styling differences over user agent detection or special CSS filters, workarounds, and hacks. Both approaches should be considered last resort in order to achieve and maintain an efficient and manageable code base. Put another way, giving detection and hacks a free pass will hurt projects in the long run as projects tend to take the way of least resistance. That is, allowing and making it easy to use detection and hacks means using detection and hacks more frequently—and more frequently is too frequently.
 
@@ -218,7 +222,7 @@ Put declarations in alphabetical order in order to achieve consistent code in a 
 
 Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-specific prefixes for a certain CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).
 
-    background: fuchsia;
+    background: none;
     border: 1px solid;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -230,7 +234,7 @@ Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-s
 
 Block content indentation
 -------------------------
-*\*In Flux\** **Indent all block content.**
+**Indent all block content.**
 
 Indent all block content, that is rules within rules as well as declarations, so to reflect hierarchy and improve understanding.
 
@@ -246,7 +250,7 @@ Indent all block content, that is rules within rules as well as declarations, so
 
 Declaration stops
 -----------------
-*\*In Flux\** **Use a semicolon and a newline after every declaration.**
+**Use a semicolon and a newline after every declaration.**
 
 End every declaration with a semicolon and a newline for consistency and extensibility reasons.
 
@@ -267,7 +271,7 @@ End every declaration with a semicolon and a newline for consistency and extensi
 
 Property name stops
 -------------------
-*\*In Flux\** **Use a space after a property name’s colon.**
+**Use a space after a property name’s colon.**
 
 Always use a single space between property and value (but no space between property and colon) for consistency reasons.
 
@@ -284,7 +288,7 @@ Always use a single space between property and value (but no space between prope
 
 Selector and declaration separation
 -----------------------------------
-*\*In Flux\** **Separate selectors and declarations by new lines.**
+**Separate selectors and declarations by new lines.**
 
 Always start a new line for each selector and declaration.
 
@@ -327,22 +331,21 @@ Always put a line between rules.
     }
 
 
-CSS Meta Rules
---------------
-*\*In Flux\** **Section comments**
+Section comments
+----------------
+**Group sections by a section comment.**
 
-Group sections by a section comment (optional).
-If possible, group style sheets sections together by using comments. Separate sections with new lines.
+If possible, group style sheets sections together by using comment headers. The headers should end with a dashed line out to the **80 character** rule. Additional documentation may be added below the header to further explain the significance of the section. Separate these sections with new lines.
 
-    /* Header */
+    /* Header ---------------------------------------------- */
 
     .adw-header {}
 
-    /* Footer */
+    /* Footer ---------------------------------------------- */
 
     .adw-footer {}
 
-    /* Gallery */
+    /* Gallery --------------------------------------------- */
 
     .adw-gallery {}
 
