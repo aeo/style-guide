@@ -12,17 +12,22 @@ Omitting the protocol—which makes the URL relative—prevents mixed content is
 **Important: this does not apply to full URLs used for links and form actions. Please ensure http: or https: are applied appropriately to prevent security issues.**
 
 	<!-- Not recommended -->
+	<style>
+		.example {
+			background: url(http://www.google.com/images/example);
+		}
+	</style>
 	<script src="http://www.google.com/js/gweb/analytics/autotrack.js"></script>
+
+
 	<!-- Recommended -->
+	<style>
+		.example {
+			background: url(//www.google.com/images/example);
+		}
+	</style>
 	<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
-	/* Not recommended */
-	.example {
-		background: url(http://www.google.com/images/example);
-	}
-	/* Recommended */
-	.example {
-		background: url(//www.google.com/images/example);
-	}
+
 
 
 Formatting Rules
@@ -40,6 +45,7 @@ The tab width is assumed to 4 spaces.
 		<li>Fantastic
 		<li>Great
 	</ul>
+
 	.example {
 		color: blue;
 	}
@@ -53,11 +59,12 @@ All code has to be lowercase: this applies to element names, attributes, attribu
 
 	<!-- Not recommended -->
 	<A HREF="/">Home</A>
+
 	<!-- Recommended -->
 	<img src="google.png" alt="Google">
 
 
-Trailing whitespace
+Trailing Whitespace
 -------------------
 **Remove trailing white spaces.**
 
@@ -65,10 +72,13 @@ Trailing white spaces are unnecessary and can complicate diffs.
 
 	<!-- Not recommended -->
 	<p>What?_
+
 	<!-- Recommended -->
 	<p>Yes please.
-	General Meta Rules
 
+
+General Meta Rules
+==================
 
 Encoding
 --------
@@ -90,7 +100,7 @@ Use comments to explain code: what does it cover, what purpose does it serve, wh
 (This item is optional as it is not deemed a realistic expectation to always demand fully documented code. Mileage may vary heavily for HTML and CSS code and depends on the project’s complexity.)
 
 
-Action items
+Action Items
 ------------
 **Mark todos and action items with TODO.**
 
@@ -100,6 +110,7 @@ Append action items after a colon as in TODO: action item.
 
 	{# TODO: revisit centering #}
 	<center>Test</center>
+
 	<!-- TODO: remove optional tags -->
 	<ul>
 		<li>Apples</li>
