@@ -13,18 +13,18 @@ Omitting the protocol—which makes the URL relative—prevents mixed content is
 
 	<!-- Not recommended -->
 	<style>
-		.example {
-			background: url(http://www.google.com/images/example);
-		}
+	  .example {
+	    background: url(http://www.google.com/images/example);
+	  }
 	</style>
 	<script src="http://www.google.com/js/gweb/analytics/autotrack.js"></script>
 
 
 	<!-- Recommended -->
 	<style>
-		.example {
-			background: url(//www.google.com/images/example);
-		}
+	  .example {
+	    background: url(//www.google.com/images/example);
+	  }
 	</style>
 	<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 
@@ -111,8 +111,8 @@ Append action items after a colon as in TODO: action item.
 
 	<!-- TODO: remove optional tags -->
 	<ul>
-		<li>Apples</li>
-		<li>Oranges</li>
+	  <li>Apples</li>
+	  <li>Oranges</li>
 	</ul>
 
 
