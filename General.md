@@ -39,15 +39,13 @@ Indentation
 
 Don’t use tabs or mix tabs and spaces for indentation.
 
-The tab width is assumed to 4 spaces.
-
 	<ul>
-		<li>Fantastic
-		<li>Great
+	  <li>Fantastic
+	  <li>Great
 	</ul>
 
 	.example {
-		color: blue;
+	  color: blue;
 	}
 
 
