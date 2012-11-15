@@ -11,22 +11,22 @@ Omitting the protocol—which makes the URL relative—prevents mixed content is
 
 **Important: this does not apply to full URLs used for links and form actions. Please ensure http: or https: are applied appropriately to prevent security issues.**
 
-  <!-- Not recommended -->
-  <style>
-    .example {
-      background: url(http://www.google.com/images/example);
-    }
-  </style>
-  <script src="http://www.google.com/js/gweb/analytics/autotrack.js"></script>
+	<!-- Not recommended -->
+	<style>
+		.example {
+			background: url(http://www.google.com/images/example);
+		}
+	</style>
+	<script src="http://www.google.com/js/gweb/analytics/autotrack.js"></script>
 
 
-  <!-- Recommended -->
-  <style>
-    .example {
-      background: url(//www.google.com/images/example);
-    }
-  </style>
-  <script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
+	<!-- Recommended -->
+	<style>
+		.example {
+			background: url(//www.google.com/images/example);
+		}
+	</style>
+	<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 
 
 
@@ -41,14 +41,14 @@ Don’t use tabs or mix tabs and spaces for indentation.
 
 The tab width is assumed to 4 spaces.
 
-  <ul>
-    <li>Fantastic
-    <li>Great
-  </ul>
+	<ul>
+		<li>Fantastic
+		<li>Great
+	</ul>
 
-  .example {
-    color: blue;
-  }
+	.example {
+		color: blue;
+	}
 
 
 Capitalization
@@ -57,11 +57,11 @@ Capitalization
 
 All code has to be lowercase: this applies to element names, attributes, attribute values (unless text/CDATA), selectors, properties, and property values (with the exception of strings).
 
-  <!-- Not recommended -->
-  <A HREF="/">Home</A>
+	<!-- Not recommended -->
+	<A HREF="/">Home</A>
 
-  <!-- Recommended -->
-  <img src="google.png" alt="Google">
+	<!-- Recommended -->
+	<img src="google.png" alt="Google">
 
 
 Trailing Whitespace
@@ -70,11 +70,11 @@ Trailing Whitespace
 
 Trailing white spaces are unnecessary and can complicate diffs.
 
-  <!-- Not recommended -->
-  <p>What?_
+	<!-- Not recommended -->
+	<p>What?_
 
-  <!-- Recommended -->
-  <p>Yes please.
+	<!-- Recommended -->
+	<p>Yes please.
 
 
 General Meta Rules
@@ -108,14 +108,14 @@ Highlight todos by using the keyword TODO only, not other common formats like @@
 
 Append action items after a colon as in TODO: action item.
 
-  {# TODO: revisit centering #}
-  <center>Test</center>
+	{# TODO: revisit centering #}
+	<center>Test</center>
 
-  <!-- TODO: remove optional tags -->
-  <ul>
-    <li>Apples</li>
-    <li>Oranges</li>
-  </ul>
+	<!-- TODO: remove optional tags -->
+	<ul>
+		<li>Apples</li>
+		<li>Oranges</li>
+	</ul>
 
 
 File Naming
