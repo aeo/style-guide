@@ -118,4 +118,4 @@ Append action items after a colon as in TODO: action item.
 
 File Naming
 -----------
-*\*In Flux\** TODO
+*\*In Flux\*\* TODO
