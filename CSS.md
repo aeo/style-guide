@@ -67,7 +67,7 @@ Using functional or generic names reduces the probability of unnecessary documen
 
 Class Name Delimiters
 ---------------------
-*\*In Flux\** **Separate words in class names by a underscore.**
+*\*In Flux** **Separate words in class names by a underscore.**
 
 Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
 
@@ -216,7 +216,7 @@ CSS Formatting Rules
 
 Declaration Order
 -----------------
-*\*In Flux\** **Alphabetize declarations.**
+*\*In Flux** **Alphabetize declarations.**
 
 Put declarations in alphabetical order in order to achieve consistent code in a way that is easy to remember and maintain.
 
@@ -308,7 +308,7 @@ Always start a new line for each selector and declaration.
 
 Rule Separation
 ---------------
-*\*In Flux\** **Separate rules by new lines.**
+*\*In Flux** **Separate rules by new lines.**
 
 Don't put a line between rules.
 
