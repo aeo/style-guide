@@ -10,7 +10,7 @@ This guide itself should be authored in [Markdown](http://daringfireball.net/pro
 
 
 ### A Note on the Working Draft
-Any rules that have yet to be reviewed or have not come to a team consensus will be labeled as *\*In Flux\*\*. This label may only be temporary; all rules must be evaluated and finalized before terminating weekly discussions (despite any individual reservations). Any rule may be reevaluated again in the future, but should be accompanied by compelling and well-thought reasoning for the amendment.
+Any rules that have yet to be reviewed or have not come to a team consensus will be labeled as *\*In Flux**. This label may only be temporary; all rules must be evaluated and finalized before terminating weekly discussions (despite any individual reservations). Any rule may be reevaluated again in the future, but should be accompanied by compelling and well-thought reasoning for the amendment.
 
 
 Parting Words
